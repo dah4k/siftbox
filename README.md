@@ -5,6 +5,8 @@ SPDX-License-Identifier: MIT-0
 
 # My SIFT Box
 
+SIFT Workstation default:
+
 ```
 Username:   sansforensics
 Password:   forensics
@@ -15,3 +17,4 @@ Password:   forensics
 * <https://www.sans.org/tools/sift-workstation/>
 * <https://github.com/teamdfir/sift/>
 * <https://github.com/ekristen/cast/>
+
