@@ -18,5 +18,10 @@ Vagrant.configure("2") do |config|
     config.vm.provision "shell", privileged: false, inline: "touch $HOME/.hushlogin"
     config.vm.provision "shell", privileged: false, path: "files/apt_upgrade.sh"
     config.vm.provision "shell", privileged: false, path: "files/install_dissect.sh"
+
+    # FIXME: Avalonia ILSpy requires a graphical desktop...
+    config.vm.provision "shell", privileged: false, path: "files/install_ilspy.sh"
+
+    # WARNING: SIFT must be installed last in the background
     config.vm.provision "shell", privileged: false, path: "files/install_sift.sh"
 end
