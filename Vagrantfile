@@ -18,4 +18,5 @@ Vagrant.configure("2") do |config|
     config.vm.provision "shell", privileged: false, inline: "touch $HOME/.hushlogin"
     config.vm.provision "shell", privileged: false, path: "files/apt_upgrade.sh"
     config.vm.provision "shell", privileged: false, path: "files/install_dissect.sh"
+    config.vm.provision "shell", privileged: false, path: "files/install_sift.sh"
 end

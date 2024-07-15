@@ -5,12 +5,11 @@ SPDX-License-Identifier: MIT-0
 
 # My SIFT Box
 
-SIFT Workstation default:
+> [!NOTE]
+> Installing SIFT workstation takes a very long time to complete.
+> The VM should remain SSH accessible
+> while the installation continues in the background.
 
-```
-Username:   sansforensics
-Password:   forensics
-```
 
 ## See Also
 
