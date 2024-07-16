@@ -11,8 +11,8 @@ trap cleanup EXIT
 
 cd $TEMP_DIRECTORY
 # FIXME: Avalonia ILSpy requires a graphical desktop...
-DEBIAN_FRONTEND=noninteractive sudo apt-get update
-DEBIAN_FRONTEND=noninteractive sudo apt-get install --yes curl unzip
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get install --yes curl unzip
 curl --silent --location --remote-name https://github.com/icsharpcode/AvaloniaILSpy/releases/download/v7.2-rc/Linux.x64.Release.zip
 unzip Linux.x64.Release.zip
 unzip ILSpy-linux-x64-Release.zip

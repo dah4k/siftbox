@@ -8,7 +8,6 @@ unused="
     radare2
 "
 
-## FIXME: Still cannot APT-GET install tshark...
 favorites="
     fd-find
     freebsd-manpages
@@ -18,6 +17,7 @@ favorites="
     ripgrep
     rizin
     tcpdump
+    tshark
 "
 
 ## Add Rizin 3rd party repo
@@ -25,12 +25,12 @@ echo 'deb http://download.opensuse.org/repositories/home:/RizinOrg/xUbuntu_22.04
 curl -fsSL https://download.opensuse.org/repositories/home:RizinOrg/xUbuntu_22.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_RizinOrg.gpg > /dev/null
 
 ## Remove unused tools for good
-DEBIAN_FRONTEND=noninteractive sudo apt-get remove --yes $unused
-DEBIAN_FRONTEND=noninteractive sudo apt-mark hold $unused
+sudo DEBIAN_FRONTEND=noninteractive apt-get remove --yes $unused
+sudo DEBIAN_FRONTEND=noninteractive apt-mark hold $unused
 
 ## Install favorite tools
-DEBIAN_FRONTEND=noninteractive sudo apt-get update
-DEBIAN_FRONTEND=noninteractive sudo apt-get install --yes $favorites
+sudo DEBIAN_FRONTEND=noninteractive apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get install --yes $favorites
 
 ## Install GEF
 curl -L -o $HOME/.gdbinit-gef.py https://gef.blah.cat/py \
